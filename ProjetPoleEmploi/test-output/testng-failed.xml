@@ -6,7 +6,6 @@
       <class name="PoleEmploiTNG">
         <methods>
           <include name="PoleEmploi"/>
-          <include name="testMenu"/>
           <include name="testLogo"/>
         </methods>
       </class> <!-- PoleEmploiTNG -->

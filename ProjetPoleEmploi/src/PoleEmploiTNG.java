@@ -7,7 +7,10 @@ import org.testng.annotations.Test;
 //import Connexion.ConnexionPage;
 import Pages.CommonPoleEmploiPage;
 import Pages.Accueil.BodyPage;
+import Pages.Accueil.FootPage;
 import Pages.Accueil.HeadPage;
+import pageEmployeurParticulier.Particulier;
+import pageEntreprise.Entreprise;
 
 import org.testng.annotations.AfterMethod;
 
@@ -18,6 +21,9 @@ WebDriver driver ;
 	//ConnexionPage instanceConnexion ;
 	HeadPage instanceHeadPage ;
 	BodyPage instanceBodyPage ;
+	FootPage instanceFootPage ;
+	Particulier instanceParticulier ;
+	Entreprise instanceEntreprise ;
 	
 
 	
@@ -44,6 +50,7 @@ WebDriver driver ;
 	
 	}
 	*/
+	/*
 	@Test(priority=2)
 	public void testLogo () throws InterruptedException {
 		
@@ -85,7 +92,8 @@ WebDriver driver ;
 		 instanceHeadPage.testConnexion();
 		
   }
-
+  // Body Page
+	
 	@Test(priority=5)
 	public void testChampMetier () throws InterruptedException {
 		
@@ -106,5 +114,46 @@ WebDriver driver ;
 		
 		instanceBodyPage = new BodyPage ( driver);
 		 instanceBodyPage.testCreerMonDossier();
+   }
+	
+	// FootPage 
+	
+	@Test(priority=8)
+	public void testActualiteEmploi () throws InterruptedException {
+		
+		instanceFootPage = new FootPage ( driver);
+		 instanceFootPage.testActualiteEmploi();
+   }
+	*/
+	// PageEmployeur Particulier
+	
+	@Test(priority=9)
+	public void testParticulier () throws InterruptedException {
+		
+		instanceParticulier = new Particulier ( driver);
+		instanceParticulier.testParticulier();
+   }
+	
+	@Test(priority=10)
+	public void testRechercheProfils () throws InterruptedException {
+		
+		instanceParticulier = new Particulier ( driver);
+		instanceParticulier.testRechercheProfils();
+   }
+	
+	// Page Entreprise
+	
+	@Test(priority=11)
+	public void testEntreprise () throws InterruptedException {
+		
+		instanceEntreprise = new Entreprise ( driver);
+		instanceEntreprise.testEntreprise();
+   }
+	
+	@Test(priority=11)
+	public void testPublierUneOffre () throws InterruptedException {
+		
+		instanceEntreprise = new Entreprise ( driver);
+		instanceEntreprise.testPublierUneOffre();
    }
 }
