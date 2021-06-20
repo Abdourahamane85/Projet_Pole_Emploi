@@ -44,7 +44,7 @@ WebDriver driver ;
 	
 	}
 	*/
-	@Test
+	@Test(priority=2)
 	public void testLogo () throws InterruptedException {
 		
 		 instanceHeadPage = new HeadPage ( driver);
@@ -52,7 +52,7 @@ WebDriver driver ;
 		
 	
 	}
-	@Test
+	@Test(priority=1)
 	public void testImgFrancaise () throws InterruptedException {
 	
 		 instanceHeadPage = new HeadPage ( driver);
@@ -60,7 +60,7 @@ WebDriver driver ;
 		
 	
 	}
-	@Test
+	@Test(priority=3)
 	public void testMenu () throws InterruptedException {
 		
 		 instanceHeadPage = new HeadPage ( driver);
@@ -69,7 +69,7 @@ WebDriver driver ;
 	
 	}
 	
-	@Test
+	@Test(priority=4)
 	public void testGouv () throws InterruptedException {
 		
 		 instanceHeadPage = new HeadPage ( driver);
@@ -78,7 +78,7 @@ WebDriver driver ;
 	
 	}
 	
-	@Test
+	@Test(priority=5)
 	public void testConnexion () throws InterruptedException {
 		
 		 instanceHeadPage = new HeadPage ( driver);
@@ -86,10 +86,25 @@ WebDriver driver ;
 		
   }
 
-	@Test
+	@Test(priority=5)
 	public void testChampMetier () throws InterruptedException {
 		
 		instanceBodyPage = new BodyPage ( driver);
 		 instanceBodyPage.testChampMetier();
-}
+   }
+	
+	@Test(priority=6)
+	public void testChampLieuDeTravail () throws InterruptedException {
+		
+		instanceBodyPage = new BodyPage ( driver);
+		 instanceBodyPage.testChampLieuDeTravail();
+	
+    }
+	
+	@Test(priority=7)
+	public void testCreerMonDossier () throws InterruptedException {
+		
+		instanceBodyPage = new BodyPage ( driver);
+		 instanceBodyPage.testCreerMonDossier();
+   }
 }
